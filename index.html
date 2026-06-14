@@ -85,8 +85,27 @@
     }
     @keyframes draw { to { stroke-dashoffset: 0; } }
 
+    /* ---------------- ABOUT CARD (the author profile) ---------------- */
+    /* Sits just under the header. The coral stripe on the left
+       ties it to the heartbeat color. Left-aligned so it is easy to read. */
+    .about { margin-top: 28px; }
+    .about-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--pulse);  /* the coral accent stripe */
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+    .about-card h3 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .about-card p { font-size: 16px; color: var(--ink); }
+
     /* ---------------- POST LIST (the home view) ---------------- */
-    main { padding: 36px 0 80px; }
+    main { padding: 30px 0 80px; }
 
     .post-card {
       background: var(--card);
@@ -170,14 +189,21 @@
   <!-- ============ HEADER ============ -->
   <header>
     <div class="site-name">The Curious Body</div>
-    <div class="tagline">This is Sankalp. I am super curious about "how human body really works!!" A rising 7th grader exploring how the human body works</div>
- <div class="tagline">This is Sankalp. I am super curious about "how human body really works!!", I will explore and share with you </div>
+    <div class="tagline">A rising 7th grader exploring how the human body works</div>
 
     <!-- The heartbeat drawing. Each pair of numbers is a point the line passes through. -->
     <svg class="pulse-line" viewBox="0 0 220 40">
       <path d="M0,20 L70,20 L82,20 L90,6 L100,34 L110,20 L150,20 L220,20" />
     </svg>
   </header>
+
+  <!-- ============ ABOUT CARD: the author profile ============ -->
+  <div class="about wrap">
+    <div class="about-card">
+      <h3>Hi, I am Sankalp</h3>
+      <p>I am super curious about how the human body really works! My goal is to explore and find out how all the neural connections fit together. I will keep posting videos, my projects, and my research. Right now the thing that intrigues me most is the BRAIN, so that is what I am digging into. More coming soon.</p>
+    </div>
+  </div>
 
   <!-- ============ HOME VIEW: the list of posts ============ -->
   <!-- This empty box gets filled with post cards by JavaScript -->
